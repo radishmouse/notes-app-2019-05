@@ -39,6 +39,7 @@ export default class NotesApp extends React.Component {
                 <NotesDetail 
                     className={styles.detail} 
                     note={theNote}
+                    handleSave={this._updateNote}
                 />
             </div>
         );
