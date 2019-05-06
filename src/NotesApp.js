@@ -23,13 +23,12 @@ export default class NotesApp extends React.Component {
                     title: 'third note',
                     text: 'imagine poop emojis here.'
                 },
-
-
             ]
         }
     }
 
     render() {
+        const theNote = this.state.notes.find(note => this.state.selectedNote === note.id);
         return (
             <div className={styles.app}>
                 <NotesList 
@@ -37,7 +36,10 @@ export default class NotesApp extends React.Component {
                     notes={this.state.notes}
                     handleSelection={this._selectNote}
                 />                
-                <NotesDetail className={styles.detail} />
+                <NotesDetail 
+                    className={styles.detail} 
+                    note={theNote}
+                />
             </div>
         );
     }
