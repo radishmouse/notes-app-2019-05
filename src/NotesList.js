@@ -8,6 +8,7 @@ function NotesListItem({text}) {
 }
 
 export default function NotesList({notes, className}) {
+    // const items = notes.map(({title}) => <NotesListItem text={title}/>);
     const items = notes.map(note => <NotesListItem text={note.title}/>);
 
     // Note: allowing styling from the parent
