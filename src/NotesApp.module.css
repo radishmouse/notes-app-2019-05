@@ -1,0 +1,14 @@
+.app {
+    display: flex;
+    flex-direction: row;
+}
+
+.list {
+    width: 20%;
+    color: blue;
+}
+
+.detail {
+    width: 80%;
+    color: red;
+}
